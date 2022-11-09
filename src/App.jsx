@@ -16,7 +16,7 @@ export function App() {
 
     const newCardColor = {
       name: nameColor,
-      hexadecimal: hexadecimalColor
+      hexadecimal: "#"+hexadecimalColor
     }
 
     if(hexadecimalColor == '' || nameColor == ''){
@@ -53,7 +53,7 @@ export function App() {
               <label htmlFor="">Cor</label>
               <input type="text"
                 placeholder="Insira sua cor no formato Hexadecimal"
-                onChange={event => setHexadecimalColor('#' + event.target.value)}
+                onChange={event => setHexadecimalColor(event.target.value)}
                 value={hexadecimalColor}
                 minLength={3}
                 maxLength={6}
@@ -91,4 +91,7 @@ export function App() {
 
 
 //ETAPAS
-//validações - quase
+
+//validações - quaee
+//required input - quae
+//estilização formulario - ok
