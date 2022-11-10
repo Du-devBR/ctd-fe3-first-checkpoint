@@ -50,6 +50,7 @@ export function App() {
                 placeholder="Nome da cor"
                 onChange={event => setNameColor(event.target.value)}
                 value={nameColor}
+                minLength={3}
               />
             </div>
             <div className="input-hexadecimal-color">
@@ -82,6 +83,7 @@ export function App() {
             component => {
               return (
                 <Card
+                  key={component.hexadecimal}
                   data={component}
                 />
               )
@@ -94,10 +96,3 @@ export function App() {
   )
 }
 
-
-
-//ETAPAS
-
-//validações - quaee
-//required input - quae
-//estilização formulario - ok
