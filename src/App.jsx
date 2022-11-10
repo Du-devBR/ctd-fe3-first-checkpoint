@@ -19,15 +19,18 @@ export function App() {
       hexadecimal: "#"+hexadecimalColor
     }
 
-    if(hexadecimalColor == '' || nameColor == ''){
+    if(hexadecimalColor === '' || nameColor === ''){
       setValidationInput(true)
-      console.log('isso')
     }else{
       setAllCardColors([...allCardColors, newCardColor])
       setNameColor('')
       setHexadecimalColor('')
-      console.log('não')
+      setValidationInput(false)
     }
+  }
+
+  function removeValidation(){
+    setValidationInput(false)
   }
 
 
@@ -35,7 +38,7 @@ export function App() {
   return (
     <div className="App">
       <form action=""
-        className={validationInput ? 'message-error' : ''}
+        className={validationInput ? 'background-error' : '' }
         onSubmit={event => registerNewCard(event)}
         >
         <div className="container-form">
@@ -55,8 +58,10 @@ export function App() {
                 placeholder="Insira sua cor no formato Hexadecimal"
                 onChange={event => setHexadecimalColor(event.target.value)}
                 value={hexadecimalColor}
+                pattern='[a-fA-F0-9]+'
                 minLength={3}
                 maxLength={6}
+                onKeyDown={removeValidation}
               />
             </div>
           </div>
@@ -67,6 +72,7 @@ export function App() {
             Adicionar
           </button>
         </div>
+        <span className="message-error">Por favor, verifique os dados inseridos no formulário</span>
       </form>
      <section className="all-cards">
       <h2 className="title-section-cores">Cores favoritas</h2>
