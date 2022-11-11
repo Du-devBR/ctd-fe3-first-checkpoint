@@ -1,4 +1,5 @@
 import "./app-style.sass"
+import "./responsive-style.sass"
 // Aqui você irá escrever as suas funções de Validação, para verificar se o Formulário foi preenchido corretamente
 
 import { useState } from "react"
@@ -36,7 +37,7 @@ export function App() {
 
 
   return (
-    <div className="App">
+    <div className="container">
       <form action=""
         className={validationInput ? 'background-error' : '' }
         onSubmit={event => registerNewCard(event)}
@@ -95,4 +96,3 @@ export function App() {
     </div>
   )
 }
-

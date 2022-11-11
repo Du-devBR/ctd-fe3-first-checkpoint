@@ -1,111 +1,111 @@
-.container-form
-  display: flex
-  flex-direction: column
-  gap: 32px
-  width: 1200px
-  padding: 32px
-  border-radius: 12px
-  background: #202020
-  transition: 0.6s
-
-  .title-form
-    font-size: 40px
-    font-weight: bold
-    color: #fff
-    text-transform: uppercase
-
-  .input-content
-    display: flex
-    gap: 16px
-    width: 100%
-
-    .input-name-color, .input-hexadecimal-color
-      display: flex
-      flex-direction: column
-      gap: 4px
-      width: 100%
-
-      label
-        color: #fff
-        opacity: 60%
-        font-size: 16px
-        font-weight: normal
-
-      input
-        padding: 12px
-        border-radius: 12px
-        border: none
-        background-color: #353535
-        color: #fff
-        font-size: 16px
-        width: 100%
-
-      ::placeholder
-          color: #ffffff
-          opacity: 40%
-          font-size: 16px
-          font-weight: normal
-  .button-submit
-    display: inline-block
-    right: 0
-    left: 100%
-    -webkit-transform: translate(-100%)
-    transform: translate(-100%)
-    position: relative
-    padding: 16px 72px
-    max-width: 231px
-    border-radius: 12px
-    border: none
-    background: #36ce7c
-    color: #fff
-    font-size: 16px
-    font-weight: normal
-    text-transform: uppercase
-    transition: 0.6s
-    cursor: pointer
-
-  .button-submit:hover
-    color: #fff
-    background-color: #21834f
-    transition: 0.6s
-
-.message-error
-  opacity: 0
-
-
-.background-error
-
-  display: flex
-  flex-direction: column
+.container
+  padding: 84px 16px
 
   .container-form
+    display: flex
+    flex-direction: column
+    gap: 32px
+    width: 100%
+    padding: 32px
+    border-radius: 12px
+    background: #202020
     transition: 0.6s
-    background-color: #473434
-    border: solid 1px #FF7070
+
+    .title-form
+      font-size: 40px
+      font-weight: bold
+      color: #fff
+      text-transform: uppercase
+
 
     .input-content
-      input
-        transition: 0.6s
-        border: solid 1px #ff7070
+      display: flex
+      gap: 16px
+      width: 100%
+
+      .input-name-color, .input-hexadecimal-color
+        display: flex
+        flex-direction: column
+        gap: 4px
+        width: 100%
+
+        label
+          color: #fff
+          opacity: 60%
+          font-size: 16px
+          font-weight: normal
+
+        input
+          padding: 12px
+          border-radius: 12px
+          border: none
+          background-color: #353535
+          color: #fff
+          font-size: 16px
+          width: 100%
+
+        ::placeholder
+            color: #ffffff
+            opacity: 40%
+            font-size: 16px
+            font-weight: normal
+    .button-submit
+      padding: 16px 72px
+      max-width: 231px
+      border-radius: 12px
+      border: none
+      background: #36ce7c
+      color: #fff
+      font-size: 16px
+      font-weight: normal
+      text-transform: uppercase
+      transition: 0.6s
+      cursor: pointer
+      align-self: flex-end
+
+    .button-submit:hover
+      color: #fff
+      background-color: #21834f
+      transition: 0.6s
 
   .message-error
-    color: #FF7070
-    opacity: 1
-    transition: 0.6s
-    font-size: 16px
-    font-weight: normal
+    opacity: 0
 
-.all-cards
-  display: flex
-  flex-direction: column
-  gap: 32px
-  margin: 32px 0
-  .container-all-cards
-    display: grid
-    grid-template-columns: repeat(auto-fit, minmax(590px, 2fr))
-    gap: 20px
 
-  .title-section-cores
-    color: #fff
-    text-transform: uppercase
-    font-size: 40px
+  .background-error
+
+    display: flex
+    flex-direction: column
+
+    .container-form
+      transition: 0.6s
+      background-color: #473434
+      border: solid 1px #FF7070
+
+      .input-content
+        input
+          transition: 0.6s
+          border: solid 1px #ff7070
+
+    .message-error
+      color: #FF7070
+      opacity: 1
+      transition: 0.6s
+      font-size: 16px
+      font-weight: normal
+
+  .all-cards
+    display: flex
+    flex-direction: column
+    gap: 32px
+    margin: 32px 0
+    overflow: hidden
+    .container-all-cards
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(400px, 2fr))
+      gap: 20px
+
+    .title-section-cores
+      color: #fff
+      text-transform: uppercase
+      font-size: 40px
